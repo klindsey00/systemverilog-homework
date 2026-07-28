@@ -38,7 +38,7 @@ module one_cycle_pulse_detector (input clk, rst, a, output detected);
     if (rst) begin
       a_f  <= '0;
       a_ff <= '0;
-    else begin
+    end else begin
       a_ff <= a_f;
       a_f  <= a;
     end
