@@ -31,7 +31,7 @@ module not_gate_using_mux
     .d0  (1'b1),
     .d1  (1'b0),
     .sel (i),
-    .y   (0)
+    .y   (o)
   );
 
 
