@@ -37,7 +37,7 @@ module mux_4_1
         y = d3;
       else
         y = d2;
-    else begin
+    end else begin
       if ( sel[0] )
         y = d1;
       else
