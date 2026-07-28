@@ -32,5 +32,17 @@ module one_cycle_pulse_detector (input clk, rst, a, output detected);
   // Note:
   // See the testbench for the output format ($display task).
 
+  logic a_f, a_ff;
+
+  always_ff @ (posedge clk) begin
+    if (rst) begin
+      a_f  <= '0;
+      a_ff <= '0;
+    else begin
+      a_ff <= a_f;
+      a_f  <= a;
+    end
+  end
+  assign detected = ~a & a_f & ~a_ff
 
 endmodule
